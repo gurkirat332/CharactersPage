@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="Story.css">
+<link href="file:///E|/Ipt Assessment/css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Golden Touch | Gurkirat Singh</title>
+</head>
+
+<body>
+	
+	<label>
+  <input type="checkbox">
+  <span class="menu">
+    <span class="hamburger"></span>
+  </span>
+  <ul>
+    <li>
+      <div class="whrec"></div><a href="index.html" class="homebtn">Home</a>
+    </li>
+    <li>
+      <div class="whrec1"></div><a href="Story section.html" class="storybtn">Story</a>
+    </li>
+    <li>
+      <div class="whrec2"></div><a href="Characters Page.html" class="characterbtn">Characters</a>
+    </li>
+  </ul>
+</label>
+	
+<header class="main-header">
+  <div class="header-right">
+    <div class="menu-expand-wrapper">
+      <div class="menu-expand"><span class="menu-expand-lines"></span></div>
+    </div>
+  </div>
+	<a id="home">
+<section> <img alt="" src="Images/Sky (Hero).jpg" id="SkyHero"> <img alt="" src="Images/Mountains Back (Hero).png" id="MountainHero"> <img alt="" src="Images/Front Sea (Hero).png" id="SeaHero">
+  <h2 id="text">The Golden Touch</h2>
+  <img alt="" src="Images/Cube (Hero).png" id="CubeHero"> <img alt="" src="Images/Cube Reflection (Hero).png" id="ReflectionHero"> <img alt="" src="Images/Hand (Hero).png" id="HandHero"> </section>
+</a>
+</header>
+	<a id="story">
+<section class="Vidtext">
+  <video id="video1" src="Videos/Video Scipt.mp4" autoplay></video>
+<h2 id="videotext">
+    <span><br>"<br>Greed will lead <br>
+    to downfall<br>"<br></span></h2>
+</section>
+</a>
+<script type="text/javascript">
+        let SkyHero = document.getElementById("SkyHero");
+        let MountainHero = document.getElementById("MountainHero");
+        let SeaHero = document.getElementById("SeaHero");
+		let text = document.getElementById("text");
+		let HandHero = document.getElementById("HandHero");
+        
+        window.addEventListener('scroll', function(){
+            var value = window.scrollY;
+            
+            SkyHero.style.top = value * 0.5 + 'px';
+            MountainHero.style.top = -value * 0.15 + 'px';
+            SeaHero.style.top = value * 0 + 'px';
+            HandHero.style.top = -value * 0.5 + 'px';
+            text.style.left = value * 0.5 + 'px';
+        })
+    </script>
+	
+<nav>
+  <p class="nav-label"></p>
+  <p class="nav-label current"></p>
+  <ul>
+    <li class="active"><a href="#home"><span></span>
+      <p>Home</p>
+      </a></li>
+    <li><a href="#story"><span></span>
+      <p>Story</p>
+      </a></li>
+    <li><a href="#story1"><span></span>
+      <p>assess</p>
+      </a></li>
+    <li><a href="#plan"><span></span>
+      <p>plan</p>
+      </a></li>
+    <li><a href="#train"><span></span>
+      <p>train</p>
+      </a></li>
+    <li><a href="#compete"><span></span>
+      <p>compete</p>
+      </a></li>
+    <li><a href="#win"><span></span>
+      <p>win</p>
+      </a></li>
+  </ul>
+</nav>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+	$('li').click(function(){
+		$('li').removeClass('active');
+		$(this).addClass('active');
+	})
+	</script>
+	<script>
+			$(window).scroll(function() {
+    var scrollTop = $(this).scrollTop();
+
+        $('.Vidtext h2').css({
+        opacity: function() {
+            var elementHeight = $(this).height(),
+            opacity = ((elementHeight - scrollTop) / elementHeight);
+            return opacity;
+        }
+    });
+});
+	</script>
+	<div> 
+	
+	</div>
+</body>
+	
+</html>
