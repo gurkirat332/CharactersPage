@@ -410,7 +410,7 @@ label .characterbtn:hover:after
     border-right: 25vh solid white;
     border-bottom: 100vh solid transparent;
     transform: translate(-100%);
-    background-image: url("file:///E|/Ipt Assessment/Website/Images/Palace Inside.jpg");
+    background-image: url("Images/Palace Inside.jpg");
     background-repeat: no-repeat;
     background-size: 150vh;
 }
