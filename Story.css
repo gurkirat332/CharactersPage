@@ -1,9 +1,10 @@
 @charset "utf-8";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Isidora Sans';
+  font-family: sans-serif;
   scroll-behavior: smooth;
 }
 html, body {
@@ -54,7 +55,7 @@ section img {
   color: #fff;
   font-size: 12.5em;
   z-index: 6;
-  font-family: 'Isidora Sans SemiBold', sans-serif;
+  font-family: Sans-Serif;
   text-align: center;
   display: flex;
   overflow: hidden;
@@ -426,7 +427,7 @@ label .characterbtn:hover:after {
   background-image: url("Images/First Scene.jpg");
   background-repeat: no-repeat;
   background-origin: content-box;
-  background-size: 1750px;
+  background-size: 1850px;
 	background-position: 35% 0;
 }
 .vidtitle {
@@ -519,7 +520,7 @@ label .characterbtn:hover:after {
   background-color: rgb(31, 223, 223);
   transform: translate(0%);
   background-image: url("Images/Second Scene.jpg");
-	  background-size: 3200px;
+	  background-size: cover;
 	  background-position: 60% 0;
   background-repeat: no-repeat;
   background-origin: content-box;
@@ -607,7 +608,7 @@ label .characterbtn:hover:after {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("Images/Third Scene.jpg");
- background-position: 60% 0;
+ background-position: 55% 0;
   background-origin: content-box;
 }
 @media (max-width: 991px) {
@@ -671,19 +672,20 @@ label .characterbtn:hover:after {
   font-size: 1.8em;
   text-align: justify;
   float: left;
-  transform: translateX(0%);
+  transform: translateX(80%);
 }
 .imagebox4 {
-  width: calc(200000% + 300px);
-  position: relative;
+  width: 50%;
+  position: absolute;
   min-width: 100px;
   height: 100%;
   background-color: rgb(31, 223, 223);
-  transform: translate(0%);
+  transform: translateX(-70%);
   background-image: url("Images/Fourth Scene.jpg");
   background-repeat: no-repeat;
   background-origin: content-box;
   background-size: cover;
+	background-position: 50%, 0;
 }
 @media (max-width: 991px) {
   .skewbox4 {
@@ -738,55 +740,63 @@ label .characterbtn:hover:after {
   position: relative;
   height: 100%;
   width: 100%;
-  background-color: white;
   display: flex;
+  transform: translateX(0%);
+  background-color: transparent;
 }
 .content5 {
-  width: calc(50% - 50px);
-  min-width: 50vw;
+  width: 40vw;
   position: absolute;
-  height: 100%;
-  background-color: white;
+  height: 50%;
+  max-width: 30vw;
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 2% 5%;
   line-height: 1.5em;
   font-size: 1.8em;
-  text-align: justify;
-  float: right;
-  transform: translate(0);
-  
+  text-align: center;
+  z-index: 1;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+	margin-right: 50%;
+}
+audio {
+    margin: auto;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    display: inline-block;
+    max-width: 100%;
+  }
+@media(max-width: 1400px) {
+  .content5 {
+    font-size: 1.53em;
+  }
 }
 .imagebox5 {
-  width: calc(200000% + 300px);
-  position: relative;
-  min-width: 100px;
+  position: absolute;
+  width: 100%;
   height: 100%;
-  background-color: rgb(31, 223, 223);
-  transform: translate(0%);
- background-image: url("Images/Fifth-Scene.jpg");
-  background-repeat: no-repeat;
-  background-origin: content-box;
   background-size: cover;
-	background-position: 50%;
+  background-repeat: no-repeat;
+  background-image: url("Images/Fifth-Scene.jpg");
+ background-position: 60% 0;
+  background-origin: content-box;
+	z-index: -1;
+	background-color: transparent;
 }
 @media (max-width: 991px) {
   .skewbox5 {
     position: relative;
+    padding: none;
     justify-content: center;
-    display: block;
-    width: 100%;
+    margin: auto;
     min-height: 107.5%;
-    align-content: center;
-    margin-top: -70px;
-	  background-image: url("Images/Fifth-Scene.jpg");
-  background-repeat: no-repeat;
-  background-origin: content-box;
-  background-size: cover;
-	background-position: 50%;
   }
   .content5 {
-   width: 50vw;
+    width: 50vw;
   position: absolute;
-  height: 60%;
+  height: 30%;
   max-width: 50vw;
   background-color: rgba(255, 255, 255, 0.85);
   padding: 2% 5%;
@@ -797,9 +807,8 @@ label .characterbtn:hover:after {
   border-radius: 100px;
   justify-content: center;
   align-items: center;
-	  margin-left: 25%;
-	  transform: translateX(50%);
-	  transform: translateY(25%);
+	  margin-left: 50%;
+	  transform: translateY(-5%);
   }
   audio {
     margin: auto;
@@ -810,8 +819,15 @@ label .characterbtn:hover:after {
     max-width: 100%;
   }
   .imagebox5 {
-    display: none;
+    background-image:  url("Images/Fifth-Scene.jpg");
+ background-position: 50% 0;
+  background-origin: content-box;
   }
+}
+@media (max-width: 630px){
+	.content5{
+		font-size: 1.1em;
+	}
 }
 .skewbox6 {
   width: 100%;
@@ -820,16 +836,27 @@ label .characterbtn:hover:after {
   overflow: hidden;
   display: flex;
   margin: auto;
+	background-color: black;
+}
+.blackbox{
+	background-color: black;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	opacity: 0.2;
 }
 .endimg {
   position: absolute;
   width: 100vw;
   height: 100%;
   background-image: url("Images/Hero Page.jpg");
-  filter: blur(5px);
+  filter: blur(20px);
+	z-index: 1;
 }
 .endtxt {
   position: absolute;
+	z-index: 3;
   font-size: 9em;
   color: white;
   justify-content: center;
